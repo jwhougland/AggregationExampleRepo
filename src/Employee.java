@@ -115,9 +115,11 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" + "\n" +
-                "\t" + "name='" + name + '\'' + "\n" +
-                "\t" + ", jobRole=" + jobRole.getRoleName() + "\n" +
-                "\t" + ", address=" + address.toString() + "\n" +
+                "\t" + "name='" + name + '\'' + ",\n" +
+                "\t" + "jobRole=" + jobRole.getRoleName() + ",\n" +
+                "\t" + "address=" + address.getStreetAddress() + "\n" +
+                "\t\t\t" + address.getCity() + ", " + address.getState().getAbbreviation() + " " + address.getZipCode() +
+                "\n" +
                 '}';
     }
 
